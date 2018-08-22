@@ -3,7 +3,7 @@
  * on 22/08/18
  */
 
-import { reducer as formReducer } from "redux-form";
+import { reducer as formReducer } from 'redux-form';
 
 const reducers = {
   form: formReducer

@@ -57,13 +57,13 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
-      "prettier --write",
+      "prettier --single-quote --write",
       "git add"
     ]
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "rm -rf build/* && rm -rf node_modules/.cache && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

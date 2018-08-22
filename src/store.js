@@ -3,13 +3,13 @@
  * on 22/08/18
  */
 
-import { createStore, applyMiddleware, combineReducers } from "redux";
-import createSagaMiddleware from "redux-saga";
-import { createLogger } from "redux-logger";
-import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
-import { createBrowserHistory } from "history";
-import { connectRouter, routerMiddleware } from "connected-react-router";
-import rootReducer from "./reducer";
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import { createLogger } from 'redux-logger';
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
+import { createBrowserHistory } from 'history';
+import { connectRouter, routerMiddleware } from 'connected-react-router';
+import rootReducer from './reducer';
 
 const middlewares = [];
 
@@ -18,7 +18,7 @@ const sagaMiddleware = createSagaMiddleware();
 middlewares.push(sagaMiddleware);
 
 // Add redux-logger in development
-if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV === 'development') {
   const logger = createLogger();
   middlewares.push(logger);
 }
