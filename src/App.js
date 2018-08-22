@@ -1,17 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import { ConnectedRouter } from "react-router-redux";
+import store, { history } from "./store";
 
 const App = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1 className="App-title">Welcome to React</h1>
-    </header>
-    <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
-    </p>
-  </div>
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <div>
+        <h1>Hello world!</h1>
+      </div>
+    </ConnectedRouter>
+  </Provider>
 );
 
 export default App;
